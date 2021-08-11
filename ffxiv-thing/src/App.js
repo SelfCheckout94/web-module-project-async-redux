@@ -5,23 +5,29 @@ import axios from "axios";
 import { connect } from "react-redux";
 
 function App(props) {
+  const randomNumber = () => {
+    return Math.floor(Math.random() * 10);
+  };
+
+  const randomIndex = randomNumber();
+  console.log(randomIndex);
+
   const handleClick = () => {
     axios
       .get("https://xivapi.com/item")
       .then((res) => {
-        console.log(res.data.Results[0].Icon);
-        props.add(`https://xivapi.com${res.data.Results[0].Icon}`);
+        console.log(res.data);
+        props.add(`https://xivapi.com${res.data.Results[randomIndex].Icon}`);
       })
       .catch((err) => console.log(err));
   };
 
-  console.log(props.gilPic);
   return (
     <div className="App">
       <button onClick={handleClick}>Click me</button>
       <br />
-      {props.gilPic !== null ? (
-        <img src={props.gilPic} alt="gil" />
+      {props.itemPic !== null ? (
+        <img src={props.itemPic} alt="random ffxiv thing" />
       ) : (
         <div></div>
       )}
@@ -31,7 +37,7 @@ function App(props) {
 
 const mapStateToProps = (state) => {
   return {
-    gilPic: state.gilPic,
+    itemPic: state.itemPic,
   };
 };
 
