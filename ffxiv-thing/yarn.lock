@@ -3648,9 +3648,14 @@
   "version" "2.6.12"
 
 "core-js@^3.6.5":
-  "integrity" "sha512-PyFBJaLq93FlyYdsndE5VaueA9K5cNB7CGzeCj191YYLhkQM0gdZR2SKihM70oF0wdqKSKClv/tEBOpoRmdOVQ=="
-  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.9.0.tgz"
-  "version" "3.9.0"
+  "integrity" "sha512-AAkP8i35EbefU+JddyWi12AWE9f2N/qr/pwnDtWz4nyUIBGMJPX99ANFFRSw6FefM374lDujdtLDyhN2A/btHw=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.16.1.tgz"
+  "version" "3.16.1"
+
+"core-js@2.5.x":
+  "integrity" "sha512-RszJCAxg/PP6uzXVXL6BsxSXx/B05oJAQ2vkJRjyjrEcNVycaqOmNb5OTxZPE3xa5gwZduqza6L9JOCenh/Ecw=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-2.5.7.tgz"
+  "version" "2.5.7"
 
 "core-util-is@~1.0.0", "core-util-is@1.0.2":
   "integrity" "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac="
@@ -6608,6 +6613,7 @@
     "jest-snapshot" "^26.6.2"
 
 "jest-resolve@*":
+  "integrity" "sha512-tRAz2bwraHufNp+CCmAD8ciyCpXCs1NQxB5EJAmtCFy6BN81loFEGWKzYu26Y62lAJJe4X4jg36Kf+NsQyiStQ=="
   "version" "26.6.0"
   dependencies:
     "@jest/types" "^26.6.0"

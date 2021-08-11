@@ -1,14 +1,18 @@
-import { ADD } from "./../actions";
+import { SEARCH } from "./../actions";
 
 const initialState = {
-  itemPic: "",
+  name: "",
+  nameJa: "",
+  icon: "",
+  url: "",
+  description: [],
 };
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD:
+    case SEARCH:
       return {
-        itemPic: action.payload,
+        item: action.payload,
       };
     default:
       return state;

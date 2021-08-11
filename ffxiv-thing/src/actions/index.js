@@ -1,5 +1,5 @@
-export const ADD = "ADD";
+export const SEARCH = "SEARCH";
 
-export const add = (pic) => {
-  return { type: ADD, payload: pic };
+export const search = (inputValue) => {
+  return { type: SEARCH, payload: inputValue };
 };
