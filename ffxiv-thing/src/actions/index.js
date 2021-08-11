@@ -1,5 +1,7 @@
 export const SEARCH = "SEARCH";
 
-export const search = (inputValue) => {
-  return { type: SEARCH, payload: inputValue };
+export const getItem = () => {};
+
+export const search = (item) => {
+  return { type: SEARCH, payload: item };
 };

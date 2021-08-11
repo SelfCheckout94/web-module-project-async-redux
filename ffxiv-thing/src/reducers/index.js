@@ -1,17 +1,14 @@
 import { SEARCH } from "./../actions";
 
 const initialState = {
-  name: "",
-  nameJa: "",
-  icon: "",
-  url: "",
-  description: [],
+  item: {},
 };
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SEARCH:
       return {
+        ...state,
         item: action.payload,
       };
     default:

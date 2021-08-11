@@ -1,15 +1,14 @@
 import React from "react";
-import { add } from "./../actions";
 import axios from "axios";
 import { connect } from "react-redux";
+import { search } from "./../actions";
 
-function SearchForm() {
+function SearchForm(props) {
   const handleClick = () => {
     axios
-      .get("https://xivapi.com/item/1")
+      .get("https://xivapi.com/item/")
       .then((res) => {
-        console.log(res.data);
-        // props.add(`https://xivapi.com${res.data.Results[0].Icon}`);
+        props.search(res.data);
       })
       .catch((err) => console.log(err));
   };
@@ -26,8 +25,8 @@ function SearchForm() {
 
 const mapStateToProps = (state) => {
   return {
-    itemPic: state.itemPic,
+    item: state.item,
   };
 };
 
-export default connect(mapStateToProps)(SearchForm);
+export default connect(mapStateToProps, { search })(SearchForm);
