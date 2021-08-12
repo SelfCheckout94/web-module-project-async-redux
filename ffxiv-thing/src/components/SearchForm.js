@@ -6,9 +6,16 @@ import { search } from "./../actions";
 function SearchForm(props) {
   const handleClick = () => {
     axios
-      .get("https://xivapi.com/item/")
+      // .get("https://xivapi.com/item/")
+      .get("https://xivapi.com/search/?string=gil&indexes=Item")
       .then((res) => {
-        props.search(res.data);
+        console.log(res.data.Results);
+        const results = res.data.Results;
+        const resultsFilter = results.filter((obj) => {
+          return obj.Name === "Gil";
+        });
+        console.log(resultsFilter);
+        // props.search(res.data);
       })
       .catch((err) => console.log(err));
   };
