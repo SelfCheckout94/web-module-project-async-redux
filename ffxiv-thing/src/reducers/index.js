@@ -1,8 +1,7 @@
 import { SEARCH } from "./../actions";
 
 const initialState = {
-  search: "",
-  item: {},
+  item: [],
 };
 
 export const reducer = (state = initialState, action) => {

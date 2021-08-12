@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Item = (props) => {
-  console.log(props);
+const Item = ({ data }) => {
+  console.log(data);
   return (
     <div>
-      <h3>{props.item.Name}</h3>
-      <p>{props.item.Name_ja}</p>
-      <img src={`https://xivapi.com${props.item.Icon}`} alt="" />
-      <p>{props.item.Description}</p>
+      <h3>{data.Name}</h3>
+      <p>{data.Name_ja}</p>
+      <img src={`https://xivapi.com${data.Icon}`} alt="" />
+      <p>{data.Description}</p>
     </div>
   );
 };
