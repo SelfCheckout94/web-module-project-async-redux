@@ -3,8 +3,9 @@ import axios from "axios";
 export const GRAB_ITEM = "GRAB_ITEM";
 export const TOGGLE_DETAILS = "TOGGLE_DETAILS";
 export const SEARCH = "SEARCH";
+export const ERROR = "ERROR";
 
-export const getItems = (item) => {
+export const getItems = () => {
   return (dispatch) => {
     axios
       .get(`https://xivapi.com/search/?indexes=Item`)
@@ -12,7 +13,7 @@ export const getItems = (item) => {
         dispatch({ type: GRAB_ITEM, payload: res.data.Results });
       })
       .catch((err) => {
-        dispatch({ type: TOGGLE_DETAILS, payload: err });
+        dispatch({ type: ERROR, payload: err });
       });
   };
 };
@@ -25,6 +26,6 @@ export const toggleDetails = (id) => {
   return { type: TOGGLE_DETAILS, payload: id };
 };
 
-export const search = (thing) => {
-  return { type: SEARCH, payload: thing };
+export const search = (term) => {
+  return { type: SEARCH, payload: term };
 };
