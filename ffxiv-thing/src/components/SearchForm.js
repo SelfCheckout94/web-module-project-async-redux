@@ -12,36 +12,19 @@ const initialFormValue = "";
 function SearchForm(props) {
   const [formValue, setFormValue] = useState(initialFormValue);
 
-  const capitalizeFirstLetter = (string) => {
-    return string[0].toUpperCase() + string.substring(1);
-  };
-
   const handleChanges = (e) => {
     e.preventDefault();
     setFormValue(e.target.value);
   };
 
-  const handleClick = () => {
-    // axios
-    //   // .get("https://xivapi.com/item/")
-    //   .get(
-    //     `https://xivapi.com/search/?string=${capitalizeFirstLetter(
-    //       formValue
-    //     )}&indexes=Item`
-    //   )
-    //   .then((res) => {
-    //     const results = res.data.Results;
-    //     const resultsFilter = results.filter((obj) => {
-    //       return obj.Name === formValue;
-    //     });
-    //     props.search(resultsFilter);
-    //     // props.search(res.data);
-    //   })
-    //   .catch((err) => console.log(err));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.search(formValue);
+    setFormValue(initialFormValue);
   };
 
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <label>
         Item Search:
         <input
@@ -51,14 +34,14 @@ function SearchForm(props) {
           onChange={handleChanges}
         />
       </label>
-      <button onClick={handleClick}>Search</button>
-    </div>
+      <button type="submit">Search</button>
+    </form>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    item: state.item,
+    searchedItem: state.searchedItem,
   };
 };
 

@@ -1,23 +1,18 @@
 import React, { useEffect } from "react";
 
 import Item from "./Item";
-import axios from "axios";
 import { connect } from "react-redux";
-import { search } from "./../actions";
+import { getItems } from "./../actions";
 
 const ItemList = (props) => {
   useEffect(() => {
-    axios
-      .get("https://xivapi.com/search/?indexes=Item")
-      .then((res) => {
-        props.search(res.data.Results);
-      })
-      .catch((err) => console.log(err));
+    props.getItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
       {props.item.map((obj) => {
-        return <Item data={obj} />;
+        return <Item data={obj} key={obj.ID} />;
       })}
     </>
   );
@@ -26,7 +21,8 @@ const ItemList = (props) => {
 const mapStateToProps = (state) => {
   return {
     item: state.item,
+    searchedItem: state.item,
   };
 };
 
-export default connect(mapStateToProps, { search })(ItemList);
+export default connect(mapStateToProps, { getItems })(ItemList);
