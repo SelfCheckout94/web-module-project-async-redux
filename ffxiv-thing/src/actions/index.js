@@ -7,8 +7,17 @@ export const ERROR = "ERROR";
 
 export const getItems = (props) => {
   return (dispatch) => {
+    console.log(props.replace('"', "").replace('"', ""));
+    let newProps;
+    if (props.includes('"')) {
+      newProps = props.replace('"', "").replace('"', "");
+    }
     axios
-      .get(`https://xivapi.com/search/?string=${props}&indexes=Item`)
+      .get(
+        `https://xivapi.com/search/?string=${
+          props.includes('"') ? newProps : props
+        }&indexes=Item`
+      )
       .then((res) => {
         dispatch({ type: GRAB_ITEM, payload: res.data.Results });
       })

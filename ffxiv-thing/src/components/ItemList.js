@@ -10,15 +10,25 @@ const ItemList = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.searchedItem]);
 
+  const exactSearchedItem = props.searchedItem
+    .replace('"', "")
+    .replace('"', "");
+  console.log(exactSearchedItem);
+
   return (
     <>
       {/* string contains "" ? filter everything but exact match : don't filter */}
-      {props.searchedItem.includes('"')
+      {props.searchedItem.split("")[0] &&
+      props.searchedItem.split("")[props.searchedItem.length - 1] === '"'
         ? props.items
             .filter((obj) => {
-              return obj.Name !== props.searchedItem;
+              return obj.Name === exactSearchedItem;
+              // return props.searchedTerm.replace('"', "") === obj.Name;
+              // const newProps = props.searchedTerm.replace('"', "");
+              // return obj.Name === newProps;
             })
             .map((obj) => {
+              console.log(obj.Name);
               return <Item data={obj} key={obj.ID} />;
             })
         : props.items.map((obj) => {
