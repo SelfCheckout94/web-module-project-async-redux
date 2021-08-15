@@ -38,10 +38,4 @@ function SearchForm(props) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    searchedItem: state.searchedItem,
-  };
-};
-
-export default connect(mapStateToProps, { search })(SearchForm);
+export default connect(null, { search })(SearchForm);
