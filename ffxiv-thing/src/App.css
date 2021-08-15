@@ -5,11 +5,17 @@ https://coolors.co/a63a50-f0e7d8-ab9b96-a1674a-ba6e6e
 
 body {
   background-color: #ab4559;
+  font-family: Palatino, URW Palladio L, serif;
 }
 
 .searchForm {
-  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  width: 20%;
   margin: 2rem;
+  margin-left: 1rem;
   padding: 2rem;
   background-color: #cec1b7;
   border: 3px solid #a68170;
@@ -21,11 +27,29 @@ body {
 }
 
 .searchLabel input {
-  margin: 0 2rem;
+  background-color: #f0e7d8;
+  margin: 0 1rem;
+}
+
+.searchBtn {
+  width: 20%;
+  margin-top: 1rem;
+  font-family: Palatino, URW Palladio L, serif;
+  color: #a68170;
+  padding: 0.5rem 1rem;
+  background-color: #f0e7d8;
+  border: 2px solid #a68170;
+}
+
+.searchBtn:hover {
+  color: a4745d;
+  background-color: #dfd4c8;
+  border: 2px solid #a4745d;
 }
 
 .searchResults {
   width: auto;
+  font-style: italic;
   text-align: center;
   padding: 2rem;
   margin: 0 1rem 1rem;
@@ -52,3 +76,18 @@ body {
   border: 3px solid #a68170;
   border-radius: 0.5rem;
 }
+
+.itemContainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* .itemIcon {
+  text-align: center;
+}
+
+.itemName {
+  text-align: center;
+} */

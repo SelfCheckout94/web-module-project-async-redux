@@ -33,7 +33,9 @@ function SearchForm(props) {
           onChange={handleChanges}
         />
       </label>
-      <button type="submit">Search</button>
+      <button className="searchBtn" type="submit">
+        Search
+      </button>
     </form>
   );
 }

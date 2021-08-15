@@ -16,8 +16,7 @@ const ItemList = (props) => {
 
   return (
     <div className="itemList">
-      {/* string contains "" ? filter everything but exact match : don't filter */}
-      {props.searchedItem.split("")[0] &&
+      {props.searchedItem.split("")[0] === '"' &&
       props.searchedItem.split("")[props.searchedItem.length - 1] === '"'
         ? props.items
             .filter((obj) => {

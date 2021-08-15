@@ -14,9 +14,13 @@ const Item = (props) => {
       {/* BUTTON PRESS:
         details hidden ? show details : hide details
       */}
-      <div onClick={handleClick}>
-        <img src={`https://xivapi.com${data.Icon}`} alt="" />
-        <h4>{data.Name}</h4>
+      <div className="itemContainer" onClick={handleClick}>
+        <img
+          className="itemIcon"
+          src={`https://xivapi.com${data.Icon}`}
+          alt=""
+        />
+        <h4 className="itemName">{data.Name}</h4>
       </div>
     </div>
   );
