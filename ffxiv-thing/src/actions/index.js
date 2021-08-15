@@ -7,7 +7,6 @@ export const ERROR = "ERROR";
 
 export const getItems = (props) => {
   return (dispatch) => {
-    console.log(props.replace('"', "").replace('"', ""));
     let newProps;
     if (props.includes('"')) {
       newProps = props.replace('"', "").replace('"', "");

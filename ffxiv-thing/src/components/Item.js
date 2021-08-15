@@ -10,15 +10,15 @@ const Item = (props) => {
   };
 
   return (
-    <>
+    <div className="item">
       {/* BUTTON PRESS:
         details hidden ? show details : hide details
       */}
       <div onClick={handleClick}>
-        <h3>{data.Name}</h3>
         <img src={`https://xivapi.com${data.Icon}`} alt="" />
+        <h4>{data.Name}</h4>
       </div>
-    </>
+    </div>
   );
 };
 

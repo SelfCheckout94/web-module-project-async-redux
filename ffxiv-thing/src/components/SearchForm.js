@@ -23,13 +23,13 @@ function SearchForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Item Search:
+    <form className="searchForm" onSubmit={handleSubmit}>
+      <label className="searchLabel">
+        <b>Item Search: </b>
         <input
           name="search"
           value={formValue}
-          placeholder="Search..."
+          placeholder="potion, sword, robe, etc..."
           onChange={handleChanges}
         />
       </label>

@@ -1,38 +1,54 @@
-.App {
+/*
+Color Palette:
+https://coolors.co/a63a50-f0e7d8-ab9b96-a1674a-ba6e6e
+*/
+
+body {
+  background-color: #ab4559;
+}
+
+.searchForm {
+  width: 25%;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #cec1b7;
+  border: 3px solid #a68170;
+  border-radius: 0.5rem;
+}
+
+.searchLabel {
+  color: #a68170;
+}
+
+.searchLabel input {
+  margin: 0 2rem;
+}
+
+.searchResults {
+  width: auto;
   text-align: center;
+  padding: 2rem;
+  margin: 0 1rem 1rem;
+  color: #a68170;
+  background-color: #cec1b7;
+  border: 3px solid #a68170;
+  border-radius: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.itemList {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+  width: 7%;
+  height: 13vh;
+  padding: 2rem 6rem;
+  margin: 1rem;
+  color: #a68170;
+  background-color: #cec1b7;
+  border: 3px solid #a68170;
+  border-radius: 0.5rem;
 }
