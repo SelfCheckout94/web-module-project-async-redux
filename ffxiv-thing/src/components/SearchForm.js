@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { search } from "./../actions";
 
-// by default displays items starting at index 0
-// When user searches they it will populate the page with items containing the term
-
 const initialFormValue = "";
 
 function SearchForm(props) {
@@ -29,7 +26,7 @@ function SearchForm(props) {
         <input
           name="search"
           value={formValue}
-          placeholder="potion, sword, robe, etc..."
+          placeholder='Sword, "Potion", robe, etc...'
           onChange={handleChanges}
         />
       </label>

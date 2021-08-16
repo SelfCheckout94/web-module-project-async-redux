@@ -4,7 +4,7 @@ https://coolors.co/a63a50-f0e7d8-ab9b96-a1674a-ba6e6e
 */
 
 body {
-  background-color: #ab4559;
+  background-color: #00a4b5;
   font-family: Palatino, URW Palladio L, serif;
 }
 
@@ -17,17 +17,17 @@ body {
   margin: 2rem;
   margin-left: 1rem;
   padding: 2rem;
-  background-color: #cec1b7;
-  border: 3px solid #a68170;
+  background-color: #fdfcdc;
+  border: 3px solid #f7a58f;
   border-radius: 0.5rem;
 }
 
 .searchLabel {
-  color: #a68170;
+  color: #00afb9;
 }
 
 .searchLabel input {
-  background-color: #f0e7d8;
+  background-color: #feebca;
   margin: 0 1rem;
 }
 
@@ -35,16 +35,16 @@ body {
   width: 20%;
   margin-top: 1rem;
   font-family: Palatino, URW Palladio L, serif;
-  color: #a68170;
+  color: #00afb9;
   padding: 0.5rem 1rem;
-  background-color: #f0e7d8;
-  border: 2px solid #a68170;
+  background-color: #feebca;
+  border: 2px solid #f7a58f;
 }
 
 .searchBtn:hover {
   color: a4745d;
-  background-color: #dfd4c8;
-  border: 2px solid #a4745d;
+  background-color: #fed9b7;
+  border: 2px solid #f7a58f;
 }
 
 .searchResults {
@@ -53,9 +53,9 @@ body {
   text-align: center;
   padding: 2rem;
   margin: 0 1rem 1rem;
-  color: #a68170;
-  background-color: #cec1b7;
-  border: 3px solid #a68170;
+  color: #00afb9;
+  background-color: #fdfcdc;
+  border: 3px solid #f7a58f;
   border-radius: 0.5rem;
 }
 
@@ -71,9 +71,9 @@ body {
   height: 13vh;
   padding: 2rem 6rem;
   margin: 1rem;
-  color: #a68170;
-  background-color: #cec1b7;
-  border: 3px solid #a68170;
+  color: #00afb9;
+  background-color: #fdfcdc;
+  border: 3px solid #f7a58f;
   border-radius: 0.5rem;
 }
 
