@@ -1,0 +1,93 @@
+/*
+Color Palette:
+https://coolors.co/a63a50-f0e7d8-ab9b96-a1674a-ba6e6e
+*/
+
+body {
+  background-color: #00a4b5;
+  font-family: Palatino, URW Palladio L, serif;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  width: 20%;
+  margin: 2rem;
+  margin-left: 1rem;
+  padding: 2rem;
+  background-color: #fdfcdc;
+  border: 3px solid #f7a58f;
+  border-radius: 0.5rem;
+}
+
+.searchLabel {
+  color: #00afb9;
+}
+
+.searchLabel input {
+  background-color: #feebca;
+  margin: 0 1rem;
+}
+
+.searchBtn {
+  width: 20%;
+  margin-top: 1rem;
+  font-family: Palatino, URW Palladio L, serif;
+  color: #00afb9;
+  padding: 0.5rem 1rem;
+  background-color: #feebca;
+  border: 2px solid #f7a58f;
+}
+
+.searchBtn:hover {
+  color: a4745d;
+  background-color: #fed9b7;
+  border: 2px solid #f7a58f;
+}
+
+.searchResults {
+  width: auto;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+  margin: 0 1rem 1rem;
+  color: #00afb9;
+  background-color: #fdfcdc;
+  border: 3px solid #f7a58f;
+  border-radius: 0.5rem;
+}
+
+.itemList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  width: 7%;
+  height: 13vh;
+  padding: 2rem 6rem;
+  margin: 1rem;
+  color: #00afb9;
+  background-color: #fdfcdc;
+  border: 3px solid #f7a58f;
+  border-radius: 0.5rem;
+}
+
+.itemContainer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* .itemIcon {
+  text-align: center;
+}
+
+.itemName {
+  text-align: center;
+} */
